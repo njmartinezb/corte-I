@@ -1,0 +1,139 @@
+/* Definición de colores */
+:root {
+  --primary-color: #028aa0;
+  --text-color: #333;
+  --border-color: #888;
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: var(--text-color);
+  padding: 1rem;
+}
+
+nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Carrusel */
+.carrusel {
+  position: relative;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+.slides img {
+  width: 100%;
+  display: none;
+}
+.slides img.active {
+  display: block;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+
+/* Grid de eventos */
+.grid-eventos {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  height: 100%;
+}
+
+label,
+fieldset {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+button[type="submit"] {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+}
+
+.card {
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 1em;
+}
+
+.grid-eventos article {
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 1em;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.grid-eventos article h2 {
+  font-weight: bold;
+}
