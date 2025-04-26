@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>UAM - Registro</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header class="flex flex-row items-center justify-left gap-8 w-full">
+      <img src="assets/logo.png" />
+      <nav class="flex flex-row items-center gap-4">
+        <a href="index.html">Inicio</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="registro.html">Registro</a>
+      </nav>
+    </header>
+    <main class="w-full flex flex-col justify-center items-center gap-3">
+      <h1 class="font-bold text-2xl">Registro a conferencias</h1>
+      <form id="registroForm" novalidate>
+        <label>
+          Nombre completo:
+          <input type="text" id="nombre" required />
+        </label>
+        <label>
+          Correo institucional:
+          <input type="email" id="email" required />
+        </label>
+        <label>
+          Carrera:
+          <input type="text" id="carrera" required />
+        </label>
+        <fieldset class="space-y-2">
+          <legend>Conferencias a asistir</legend>
+          <label
+            ><input type="checkbox" name="evento" value="GitHub" /> GitHub en
+            proyectos colaborativos</label
+          >
+          <label
+            ><input type="checkbox" name="evento" value="Docker" /> Introducción
+            a Docker</label
+          >
+          <label
+            ><input type="checkbox" name="evento" value="Linux" /> Servidores
+            Linux</label
+        </fieldset>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="mensaje" class="hidden"></div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
