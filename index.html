@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>UAM - Inicio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="flex flex-row items-center justify-left gap-8 w-full">
+      <img src="assets/logo.png" />
+      <nav class="flex flex-row items-center gap-4">
+        <a href="index.html">Inicio</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="registro.html">Registro</a>
+      </nav>
+    </header>
+    <main
+      class="w-full h-full flex flex-col justify-center items-center gap-16"
+    >
+      <section class="flex flex-row gap-4 w-full justify-center items-center">
+        <div class="card p-4">
+          <strong class="block">Misión</strong>
+          <p>
+            Formar líderes con visión global, emprendedores, con sólidos
+            conocimientos científicos y principios humanísticos, capaces de
+            aprender permanentemente para hacer frente a los desafíos de la
+            sociedad contemporánea
+          </p>
+        </div>
+        <div class="card p-4">
+          <strong class="block">Visión</strong>
+          <p>
+            Consolidarse como institución académica de clase internacional
+            comprometida con el desarrollo humano equitativo y sostenible, con
+            la eficiencia y competitividad de una organización privada de alto
+            rendimiento
+          </p>
+        </div>
+      </section>
+      <section class="carrusel">
+        <div class="slides">
+          <img
+            class="aspect-16/9"
+            src="assets/CampusUAM.jpg"
+            alt="Campus UAM"
+          />
+          <img
+            class="aspect-16/9"
+            src="assets/EstudiantesEnActividad.jpg"
+            alt="Estudiantes en actividad"
+          />
+          <img
+            class="aspect-16/9"
+            src="assets/LaboratorioIMG.jpg"
+            alt="Laboratorio"
+          />
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
